@@ -19,7 +19,7 @@ Jenkins is a self-contained Java-based program, ready to run out-of-the-box, wit
    ```sh
    java -version
    find /usr/lib/jvm/java-1.8* | head -n 3
-   JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-<Java version which seen in the above output>
+   JAVA_HOME=/usr/lib/jvm/java-11-amazon-corretto.x86_64
    export JAVA_HOME
    PATH=$PATH:$JAVA_HOME
     # To set it permanently update your .bash_profile
@@ -40,6 +40,7 @@ Jenkins is a self-contained Java-based program, ready to run out-of-the-box, wit
    yum -y install wget
    sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
    sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+   amazon-linux-extras install epel
    yum -y install jenkins
    ```
 
